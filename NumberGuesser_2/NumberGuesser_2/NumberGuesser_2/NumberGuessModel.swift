@@ -19,6 +19,16 @@ class NumberGuessModel {
         return isValid
     }
     
-    func getImage(
+    func getImage() -> String {
+        var imgName: String = ""
+        if (guessCount < 6){
+            imgName = "happy"
+        }else if (guessCount<10){
+            imgName="neutral"
+        }else{
+            imgName="sad"
+        }
+        return imgName
+    }
     
 }
